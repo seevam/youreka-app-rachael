@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { SignUpButton } from '@clerk/nextjs'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { FadeIn } from '@/components/animations/FadeIn'
@@ -36,12 +35,10 @@ export const Hero: React.FC = () => {
 
             <FadeIn delay={0.4}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <SignUpButton mode="modal">
-                  <Button size="lg" className="group">
-                    Start Learning Free
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                  </Button>
-                </SignUpButton>
+                <Button size="lg" href="/home" className="group">
+                  Start Learning Free
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                </Button>
                 <Button variant="secondary" size="lg" href="#features">
                   See How It Works
                 </Button>

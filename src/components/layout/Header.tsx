@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { SignInButton, SignUpButton, UserButton, useAuth } from '@clerk/nextjs'
 import { Menu, X } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
@@ -10,7 +9,6 @@ import { APP_NAME, NAV_LINKS } from '@/lib/constants'
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { isSignedIn } = useAuth()
 
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-divider z-50">
@@ -19,7 +17,7 @@ export const Header: React.FC = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-bold text-xl">
-              T
+              Y
             </div>
             <span className="text-xl font-bold text-text-primary">{APP_NAME}</span>
           </Link>
@@ -37,25 +35,11 @@ export const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* Desktop Auth Buttons */}
+          {/* Desktop Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            {isSignedIn ? (
-              <>
-                <Button href="/home" variant="ghost">
-                  Dashboard
-                </Button>
-                <UserButton afterSignOutUrl="/" />
-              </>
-            ) : (
-              <>
-                <SignInButton mode="modal">
-                  <Button variant="ghost">Log In</Button>
-                </SignInButton>
-                <SignUpButton mode="modal">
-                  <Button variant="primary">Get Started</Button>
-                </SignUpButton>
-              </>
-            )}
+            <Button href="/home" variant="primary">
+              Get Started
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -82,28 +66,10 @@ export const Header: React.FC = () => {
                   {link.name}
                 </a>
               ))}
-              <div className="pt-4 flex flex-col space-y-3">
-                {isSignedIn ? (
-                  <>
-                    <Button href="/home" variant="ghost">
-                      Dashboard
-                    </Button>
-                    <UserButton afterSignOutUrl="/" />
-                  </>
-                ) : (
-                  <>
-                    <SignInButton mode="modal">
-                      <Button variant="ghost" className="w-full">
-                        Log In
-                      </Button>
-                    </SignInButton>
-                    <SignUpButton mode="modal">
-                      <Button variant="primary" className="w-full">
-                        Get Started
-                      </Button>
-                    </SignUpButton>
-                  </>
-                )}
+              <div className="pt-4">
+                <Button href="/home" variant="primary" className="w-full">
+                  Get Started
+                </Button>
               </div>
             </nav>
           </div>

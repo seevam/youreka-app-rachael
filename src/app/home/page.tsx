@@ -1,25 +1,7 @@
-'use client'
-
-import { useAuth } from '@clerk/nextjs'
-import { redirect } from 'next/navigation'
 import { Container } from '@/components/ui/Container'
 import { Card } from '@/components/ui/Card'
 
 export default function HomePage() {
-  const { isSignedIn, isLoaded } = useAuth()
-
-  if (!isLoaded) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
-      </div>
-    )
-  }
-
-  if (!isSignedIn) {
-    redirect('/')
-  }
-
   return (
     <main className="min-h-screen pt-24 pb-12 bg-background-gray">
       <Container>
