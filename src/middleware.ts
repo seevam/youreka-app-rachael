@@ -7,9 +7,11 @@ const isPublicRoute = createRouteMatcher([
   "/api/webhooks(.*)",
 ]);
 
-export default clerkMiddleware((auth, req) => {
-  if (!isPublicRoute(req)) {
-    auth().protect();
+export default clerkMiddleware(async (auth, req) => {
+  const authObj = auth();
+
+  if (!isPublicRoute(req) && !authObj.userId) {
+    return authObj.redirectToSignIn();
   }
 });
 
