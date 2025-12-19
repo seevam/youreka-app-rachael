@@ -21,19 +21,19 @@ export const CTASection: React.FC = () => {
           <FadeIn>
             <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-white text-sm font-medium mb-4">
               <Sparkles size={16} className="mr-2" />
-              Join Millions Discovering Their Beauty
+              Join 500K+ Teens Getting Clear Skin
             </div>
           </FadeIn>
 
           <FadeIn delay={0.1}>
             <h2 className="text-h2-mobile md:text-h2 text-white">
-              Ready to Discover Your Perfect Beauty Routine?
+              Ready to Finally Find Products That Work?
             </h2>
           </FadeIn>
 
           <FadeIn delay={0.2}>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Take the first step towards glowing, healthy skin. Get your free AI scan today.
+              Stop wasting money on the wrong products. Find your skin type and get personalized recommendations in under 10 seconds.
             </p>
           </FadeIn>
 
@@ -43,9 +43,9 @@ export const CTASection: React.FC = () => {
                 <Button
                   size="lg"
                   variant="secondary"
-                  className="group bg-white text-primary hover:bg-gray-100 hover:text-primary-dark border-0"
+                  className="group bg-white text-primary hover:bg-gray-100 hover:text-primary-dark border-0 shadow-xl"
                 >
-                  Get Your Free Scan
+                  Find My Skin Type Free
                   <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
                 </Button>
               </SignUpButton>

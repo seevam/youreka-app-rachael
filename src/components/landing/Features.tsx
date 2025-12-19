@@ -12,10 +12,10 @@ export const Features: React.FC = () => {
         <FadeIn>
           <div className="text-center mb-16">
             <h2 className="text-h2-mobile md:text-h2 text-text-primary mb-4">
-              Your Personal Beauty Assistant
+              Everything You Need for Clear, Healthy Skin
             </h2>
             <p className="text-body-mobile md:text-body text-text-secondary max-w-2xl mx-auto">
-              Everything you need to discover your perfect beauty routine
+              No more guessing - get personalized recommendations that work for YOUR skin
             </p>
           </div>
         </FadeIn>
@@ -46,15 +46,15 @@ export const Features: React.FC = () => {
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        <span className="text-text-secondary">Instant facial analysis in seconds</span>
+                        <span className="text-text-secondary">Know if you're oily, dry, combo, or sensitive</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        <span className="text-text-secondary">Detect skin type, tone, and texture</span>
+                        <span className="text-text-secondary">Identify acne-prone areas and dry patches</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        <span className="text-text-secondary">Identify concerns like acne, dark spots, and wrinkles</span>
+                        <span className="text-text-secondary">Results in under 10 seconds, completely free</span>
                       </li>
                     </ul>
                   )}
@@ -63,15 +63,15 @@ export const Features: React.FC = () => {
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        <span className="text-text-secondary">Custom skincare routines tailored to you</span>
+                        <span className="text-text-secondary">Products reviewed by other teens</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        <span className="text-text-secondary">Makeup suggestions for your unique features</span>
+                        <span className="text-text-secondary">Real results from people with your skin type</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        <span className="text-text-secondary">Wellness tips for glowing skin from within</span>
+                        <span className="text-text-secondary">Specific solutions for acne, texture, and more</span>
                       </li>
                     </ul>
                   )}
@@ -80,15 +80,15 @@ export const Features: React.FC = () => {
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        <span className="text-text-secondary">Track improvements over time</span>
+                        <span className="text-text-secondary">Drugstore gems that work as well as $$$</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        <span className="text-text-secondary">Monitor hydration, texture, and clarity</span>
+                        <span className="text-text-secondary">Filter by your budget - under $15, $30, etc.</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        <span className="text-text-secondary">See your progress with visual comparisons</span>
+                        <span className="text-text-secondary">No more wasting money on products that don't work</span>
                       </li>
                     </ul>
                   )}
@@ -97,15 +97,15 @@ export const Features: React.FC = () => {
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        <span className="text-text-secondary">Get products matched to your skin profile</span>
+                        <span className="text-text-secondary">Simple AM & PM routines (3-5 steps max)</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        <span className="text-text-secondary">Discover brands that work for your needs</span>
+                        <span className="text-text-secondary">Learn what each product does and why</span>
                       </li>
                       <li className="flex items-start">
                         <span className="text-primary mr-2">✓</span>
-                        <span className="text-text-secondary">Save money by avoiding wrong purchases</span>
+                        <span className="text-text-secondary">No complicated routines or confusing jargon</span>
                       </li>
                     </ul>
                   )}
@@ -118,19 +118,21 @@ export const Features: React.FC = () => {
                     {feature.id === 1 && (
                       <div className="space-y-4">
                         <div className="bg-white rounded-lg p-4 border-l-4 border-primary">
-                          <p className="text-sm font-semibold text-text-primary mb-2">Scan Complete: Combination Skin</p>
+                          <p className="text-sm font-semibold text-text-primary mb-2">Your Skin Type: Combination</p>
                           <div className="flex items-center justify-between">
-                            <span className="text-xs text-text-secondary">Analysis time: 3 sec</span>
-                            <span className="text-primary text-sm font-semibold">✨ 95% Match</span>
+                            <span className="text-xs text-text-secondary">Scan completed in 8 sec</span>
+                            <span className="text-primary text-sm font-semibold">✨ 98% Confident</span>
                           </div>
                         </div>
-                        <div className="flex items-center space-x-4">
-                          <div className="flex -space-x-2">
-                            <div className="w-8 h-8 rounded-full bg-primary"></div>
-                            <div className="w-8 h-8 rounded-full bg-accent-yellow"></div>
-                            <div className="w-8 h-8 rounded-full bg-accent-blue"></div>
+                        <div className="bg-white rounded-lg p-4 space-y-2">
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm text-text-primary">🎯 Active Acne</span>
+                            <span className="text-xs text-accent-yellow">T-Zone</span>
                           </div>
-                          <p className="text-sm text-text-secondary">3 concerns identified</p>
+                          <div className="flex items-center justify-between">
+                            <span className="text-sm text-text-primary">💧 Dry Patches</span>
+                            <span className="text-xs text-accent-blue">Cheeks</span>
+                          </div>
                         </div>
                       </div>
                     )}
@@ -138,18 +140,31 @@ export const Features: React.FC = () => {
                     {feature.id === 2 && (
                       <div className="space-y-4">
                         <div className="bg-white rounded-lg p-4">
-                          <p className="text-sm text-text-secondary mb-1">Your Morning Routine</p>
-                          <p className="text-3xl font-bold text-primary">4 Steps</p>
-                          <p className="text-sm text-primary">Personalized for you ✨</p>
+                          <p className="text-sm text-text-secondary mb-1">For Combination + Acne-Prone</p>
+                          <p className="text-2xl font-bold text-primary mb-2">Recommended</p>
                         </div>
-                        <div className="grid grid-cols-2 gap-3">
-                          <div className="bg-white rounded-lg p-3">
-                            <p className="text-xs text-text-secondary">Cleanser</p>
-                            <p className="text-sm font-semibold text-primary">Gentle Foam</p>
+                        <div className="space-y-3">
+                          <div className="bg-white rounded-lg p-4 border-l-4 border-primary">
+                            <div className="flex items-center justify-between mb-1">
+                              <p className="text-sm font-semibold text-text-primary">CeraVe Foaming Cleanser</p>
+                              <span className="text-accent-yellow text-sm">⭐ 4.7</span>
+                            </div>
+                            <p className="text-xs text-text-secondary mb-2">Perfect for oily T-zone</p>
+                            <div className="flex items-center justify-between">
+                              <span className="text-xs text-primary font-semibold">$12.99</span>
+                              <span className="text-xs text-accent-blue">467 teens verified</span>
+                            </div>
                           </div>
-                          <div className="bg-white rounded-lg p-3">
-                            <p className="text-xs text-text-secondary">Moisturizer</p>
-                            <p className="text-sm font-semibold text-primary">Hydrating Gel</p>
+                          <div className="bg-white rounded-lg p-4 border-l-4 border-accent-blue">
+                            <div className="flex items-center justify-between mb-1">
+                              <p className="text-sm font-semibold text-text-primary">Neutrogena Hydro Boost</p>
+                              <span className="text-accent-yellow text-sm">⭐ 4.6</span>
+                            </div>
+                            <p className="text-xs text-text-secondary mb-2">Hydrates dry cheeks</p>
+                            <div className="flex items-center justify-between">
+                              <span className="text-xs text-primary font-semibold">$18.99</span>
+                              <span className="text-xs text-accent-blue">892 teens verified</span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -157,11 +172,23 @@ export const Features: React.FC = () => {
 
                     {feature.id === 3 && (
                       <div className="space-y-3">
-                        <div className="bg-primary/10 rounded-lg p-3 ml-auto max-w-[80%]">
-                          <p className="text-sm text-text-primary">How is my skin doing?</p>
+                        <div className="bg-white rounded-lg p-4">
+                          <p className="text-xs text-text-secondary mb-2">Budget Filter</p>
+                          <div className="space-y-2">
+                            <button className="w-full text-left px-3 py-2 bg-primary/10 rounded-lg">
+                              <p className="text-sm font-semibold text-primary">💰 Under $15</p>
+                            </button>
+                            <button className="w-full text-left px-3 py-2 bg-gray-100 rounded-lg">
+                              <p className="text-sm text-text-secondary">$15 - $30</p>
+                            </button>
+                            <button className="w-full text-left px-3 py-2 bg-gray-100 rounded-lg">
+                              <p className="text-sm text-text-secondary">$30+</p>
+                            </button>
+                          </div>
                         </div>
-                        <div className="bg-white rounded-lg p-3 max-w-[80%]">
-                          <p className="text-sm text-text-primary">Your skin health has improved by 15% this month! Your hydration levels are up and dark spots are fading. Keep it up! 🌟</p>
+                        <div className="bg-accent-blue/10 rounded-lg p-3">
+                          <p className="text-xs font-semibold text-accent-blue mb-2">💡 Pro Tip</p>
+                          <p className="text-xs text-text-primary">The Ordinary has great dupes for expensive serums!</p>
                         </div>
                       </div>
                     )}
@@ -169,30 +196,36 @@ export const Features: React.FC = () => {
                     {feature.id === 4 && (
                       <div className="space-y-3">
                         <div className="bg-white rounded-lg p-4">
-                          <p className="text-sm font-semibold text-text-primary mb-3">Top Matches For You</p>
-                          <div className="space-y-2">
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center space-x-2">
-                                <span className="text-accent-yellow text-xl">⭐</span>
-                                <span className="text-sm">CeraVe Cleanser</span>
+                          <div className="flex items-center justify-between mb-3">
+                            <p className="text-sm font-semibold text-text-primary">Morning Routine</p>
+                            <span className="text-xs text-primary">☀️ AM</span>
+                          </div>
+                          <div className="space-y-3">
+                            <div className="flex items-center space-x-3">
+                              <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center text-primary font-bold text-sm">1</div>
+                              <div>
+                                <p className="text-sm font-medium text-text-primary">Cleanser</p>
+                                <p className="text-xs text-text-secondary">Removes oil & dirt</p>
                               </div>
-                              <span className="text-sm font-semibold text-primary">98% Match</span>
                             </div>
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center space-x-2">
-                                <span className="text-accent-yellow text-xl">⭐</span>
-                                <span className="text-sm">Neutrogena SPF</span>
+                            <div className="flex items-center space-x-3">
+                              <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center text-primary font-bold text-sm">2</div>
+                              <div>
+                                <p className="text-sm font-medium text-text-primary">Moisturizer</p>
+                                <p className="text-xs text-text-secondary">Hydrates skin</p>
                               </div>
-                              <span className="text-sm font-semibold text-primary">95% Match</span>
                             </div>
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center space-x-2">
-                                <span className="text-accent-yellow text-xl">⭐</span>
-                                <span className="text-sm">The Ordinary Serum</span>
+                            <div className="flex items-center space-x-3">
+                              <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center text-primary font-bold text-sm">3</div>
+                              <div>
+                                <p className="text-sm font-medium text-text-primary">Sunscreen</p>
+                                <p className="text-xs text-text-secondary">Prevents damage</p>
                               </div>
-                              <span className="text-sm font-semibold text-primary">92% Match</span>
                             </div>
                           </div>
+                        </div>
+                        <div className="bg-accent-yellow/10 rounded-lg p-3">
+                          <p className="text-xs font-semibold text-text-primary">⏱️ Takes only 3 minutes!</p>
                         </div>
                       </div>
                     )}

@@ -1,97 +1,97 @@
 export const APP_NAME = "Youreka"
-export const APP_TAGLINE = "Your Personal Beauty AI Scanner"
-export const APP_DESCRIPTION = "Discover your unique beauty profile with AI-powered face analysis. Get personalized skincare, makeup, and wellness recommendations tailored just for you."
+export const APP_TAGLINE = "Find Your Perfect Skincare Match"
+export const APP_DESCRIPTION = "No more guessing what works for your skin. Our AI helps teens discover the right products for acne, oily skin, dryness, and everything in between. Get personalized recommendations that actually work."
 
 export const FEATURES = [
   {
     id: 1,
-    icon: "📸",
-    title: "AI Face Scanning",
-    description: "Advanced facial analysis in seconds",
-    subtitle: "Identify skin type, tone, and concerns",
+    icon: "🎯",
+    title: "Know Your Skin Type",
+    description: "Quick AI scan tells you if you're oily, dry, combo, or sensitive",
+    subtitle: "Stop buying products that make things worse",
   },
   {
     id: 2,
-    icon: "💄",
-    title: "Personalized Recommendations",
-    description: "Custom beauty routines just for you",
-    subtitle: "Skincare, makeup, and wellness advice",
+    icon: "✨",
+    title: "Products That Actually Work",
+    description: "Get recommendations based on YOUR specific skin concerns",
+    subtitle: "Acne, dark spots, texture, redness - we've got you covered",
   },
   {
     id: 3,
-    icon: "🔬",
-    title: "Skin Health Insights",
-    description: "Track your skin's progress over time",
-    subtitle: "Monitor changes and improvements",
+    icon: "💰",
+    title: "Budget-Friendly Options",
+    description: "Find affordable products that work as well as expensive ones",
+    subtitle: "From drugstore to mid-range, sorted by your budget",
   },
   {
     id: 4,
-    icon: "🛍️",
-    title: "Smart Product Matching",
-    description: "Find products that work for you",
-    subtitle: "Curated suggestions from trusted brands",
+    icon: "📚",
+    title: "Learn Your Routine",
+    description: "Simple step-by-step guides for AM & PM routines",
+    subtitle: "No complicated 10-step routines - just what you need",
   },
 ]
 
 export const PAIN_POINTS = [
   {
     id: 1,
-    emoji: "😕",
-    text: "Confused by endless beauty products",
+    emoji: "😤",
+    text: "Tried everything for acne but nothing works",
   },
   {
     id: 2,
     emoji: "💸",
-    text: "Wasting money on wrong products",
+    text: "Spent too much on products that made skin worse",
   },
   {
     id: 3,
-    emoji: "🤔",
-    text: "Not sure what your skin really needs",
+    emoji: "🤷",
+    text: "No idea where to start with skincare",
   },
 ]
 
 export const HOW_IT_WORKS = [
   {
     id: 1,
-    icon: "📸",
-    title: "Scan Your Face",
-    description: "Take a quick selfie for AI analysis",
+    icon: "📱",
+    title: "Snap a Selfie",
+    description: "Our AI analyzes your skin in under 10 seconds",
   },
   {
     id: 2,
     icon: "🔍",
-    title: "Get Your Profile",
-    description: "Receive detailed skin analysis results",
+    title: "See Your Skin Profile",
+    description: "Learn your skin type and main concerns",
   },
   {
     id: 3,
-    icon: "✨",
-    title: "Follow Recommendations",
-    description: "Start your personalized beauty journey",
+    icon: "🎁",
+    title: "Get Product Matches",
+    description: "Personalized recommendations with reviews from other teens",
   },
 ]
 
 export const STATS = [
   {
     id: 1,
-    value: "1M+",
-    label: "Face Scans Completed",
+    value: "500K+",
+    label: "Teens Helped",
   },
   {
     id: 2,
-    value: "95%",
-    label: "User Satisfaction",
+    value: "4.8★",
+    label: "App Rating",
   },
   {
     id: 3,
-    value: "4.9★",
-    label: "Average Rating",
+    value: "2M+",
+    label: "Products Reviewed",
   },
   {
     id: 4,
-    value: "50+",
-    label: "Skin Concerns Detected",
+    value: "Free",
+    label: "Always",
   },
 ]
 
@@ -105,9 +105,9 @@ export const COUNTRIES = [
 ]
 
 export const TRUST_BADGES = [
-  "Free Face Scan",
+  "100% Free Forever",
   "Privacy Protected",
-  "All Skin Types",
+  "Made for Teens",
 ]
 
 export const SOCIAL_LINKS = {
