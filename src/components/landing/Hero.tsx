@@ -1,12 +1,11 @@
 'use client'
 
 import React from 'react'
-import { SignUpButton } from '@clerk/nextjs'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { FadeIn } from '@/components/animations/FadeIn'
 import { APP_TAGLINE, APP_DESCRIPTION } from '@/lib/constants'
-import { ArrowRight, TrendingUp, Award, Zap } from 'lucide-react'
+import { ArrowRight, Zap } from 'lucide-react'
 
 export const Hero: React.FC = () => {
   return (
@@ -16,33 +15,31 @@ export const Hero: React.FC = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <FadeIn delay={0.1}>
-              <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium">
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-primary/10 to-accent-blue/10 rounded-full text-primary text-sm font-medium border border-primary/20">
                 <Zap size={16} className="mr-2" />
-                Now Live in Southeast Asia
+                Join 500K+ Teens Getting Clear Skin
               </div>
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              <h1 className="text-h1-mobile md:text-h1 text-text-primary">
+              <h1 className="text-h1-mobile md:text-h1 text-text-primary leading-tight">
                 {APP_TAGLINE}
               </h1>
             </FadeIn>
 
             <FadeIn delay={0.3}>
-              <p className="text-body-mobile md:text-body text-text-secondary max-w-xl">
+              <p className="text-lg md:text-xl text-text-secondary max-w-xl leading-relaxed">
                 {APP_DESCRIPTION}
               </p>
             </FadeIn>
 
             <FadeIn delay={0.4}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <SignUpButton mode="modal">
-                  <Button size="lg" className="group">
-                    Start Learning Free
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                  </Button>
-                </SignUpButton>
-                <Button variant="secondary" size="lg" href="#features">
+                <Button size="lg" href="#quiz" className="group shadow-lg hover:shadow-xl transition-shadow">
+                  Find My Skin Type Free
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                </Button>
+                <Button variant="secondary" size="lg" href="#features" className="border-2">
                   See How It Works
                 </Button>
               </div>
@@ -51,22 +48,22 @@ export const Hero: React.FC = () => {
             <FadeIn delay={0.5}>
               <div className="flex flex-wrap items-center gap-6 pt-4">
                 <div className="flex items-center text-sm text-text-secondary">
-                  <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mr-2">
+                  <div className="w-8 h-8 bg-accent-blue/20 rounded-full flex items-center justify-center mr-2">
                     ✓
                   </div>
-                  100% Free to Start
+                  100% Free Forever
+                </div>
+                <div className="flex items-center text-sm text-text-secondary">
+                  <div className="w-8 h-8 bg-accent-yellow/20 rounded-full flex items-center justify-center mr-2">
+                    ✓
+                  </div>
+                  No Signup Required
                 </div>
                 <div className="flex items-center text-sm text-text-secondary">
                   <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mr-2">
                     ✓
                   </div>
-                  No Credit Card Required
-                </div>
-                <div className="flex items-center text-sm text-text-secondary">
-                  <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center mr-2">
-                    ✓
-                  </div>
-                  Ages 18-25
+                  Results in 10 Seconds
                 </div>
               </div>
             </FadeIn>
@@ -83,54 +80,53 @@ export const Hero: React.FC = () => {
                     {/* Header */}
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="text-sm text-text-secondary">Welcome back! 👋</p>
-                        <h3 className="text-lg font-semibold text-text-primary">Your Progress</h3>
+                        <p className="text-sm text-text-secondary">Your Skin Type</p>
+                        <h3 className="text-lg font-semibold text-text-primary">Combination • Acne-Prone</h3>
                       </div>
-                      <div className="bg-accent-yellow/20 px-3 py-1 rounded-full">
-                        <span className="text-sm font-bold">7🔥</span>
+                      <div className="bg-accent-blue/20 px-3 py-1 rounded-full">
+                        <span className="text-sm font-bold">✨ 98%</span>
                       </div>
                     </div>
 
-                    {/* Stats Cards */}
+                    {/* Concerns Cards */}
                     <div className="grid grid-cols-2 gap-3">
                       <div className="bg-primary/10 rounded-lg p-4">
-                        <TrendingUp className="text-primary mb-2" size={24} />
-                        <p className="text-2xl font-bold text-text-primary">+12.5%</p>
-                        <p className="text-xs text-text-secondary">Portfolio</p>
+                        <div className="text-2xl mb-2">🎯</div>
+                        <p className="text-sm font-bold text-text-primary">Active Acne</p>
+                        <p className="text-xs text-text-secondary">T-Zone Area</p>
                       </div>
-                      <div className="bg-accent-blue/10 rounded-lg p-4">
-                        <Award className="text-accent-blue mb-2" size={24} />
-                        <p className="text-2xl font-bold text-text-primary">850</p>
-                        <p className="text-xs text-text-secondary">XP Points</p>
-                      </div>
-                    </div>
-
-                    {/* Progress Bar */}
-                    <div className="space-y-2">
-                      <div className="flex justify-between text-sm">
-                        <span className="text-text-secondary">Module Progress</span>
-                        <span className="text-primary font-semibold">75%</span>
-                      </div>
-                      <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-primary rounded-full" style={{ width: '75%' }}></div>
+                      <div className="bg-accent-yellow/10 rounded-lg p-4">
+                        <div className="text-2xl mb-2">💧</div>
+                        <p className="text-sm font-bold text-text-primary">Dry Cheeks</p>
+                        <p className="text-xs text-text-secondary">Needs Hydration</p>
                       </div>
                     </div>
 
-                    {/* Daily Mission */}
-                    <div className="bg-gradient-to-r from-primary to-primary-dark rounded-lg p-4 text-white">
-                      <p className="text-sm font-semibold mb-1">Daily Mission</p>
-                      <p className="text-xs opacity-90">Complete 2 lessons today</p>
+                    {/* Product Recommendation */}
+                    <div className="bg-white border-2 border-primary/20 rounded-lg p-3 space-y-2">
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs font-semibold text-primary">TOP MATCH FOR YOU</span>
+                        <span className="text-xs text-accent-yellow">⭐ 4.8</span>
+                      </div>
+                      <p className="text-sm font-bold text-text-primary">CeraVe Foaming Cleanser</p>
+                      <p className="text-xs text-text-secondary">Perfect for oily/combo skin • $12.99</p>
+                    </div>
+
+                    {/* Quick Action */}
+                    <div className="bg-gradient-to-r from-primary to-accent-blue rounded-lg p-4 text-white">
+                      <p className="text-sm font-semibold mb-1">Start Your Routine</p>
+                      <p className="text-xs opacity-90">3 simple steps, morning & night</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Floating Elements */}
-              <div className="absolute -top-6 -right-6 bg-primary text-white px-4 py-2 rounded-lg shadow-lg animate-float">
-                <p className="text-sm font-semibold">+50 XP</p>
+              <div className="absolute -top-6 -right-6 bg-accent-blue text-white px-4 py-2 rounded-lg shadow-lg animate-float">
+                <p className="text-sm font-semibold">✨ Skin Analyzed</p>
               </div>
               <div className="absolute -bottom-6 -left-6 bg-accent-yellow text-text-primary px-4 py-2 rounded-lg shadow-lg animate-float" style={{ animationDelay: '1s' }}>
-                <p className="text-sm font-semibold">🏆 Badge Earned!</p>
+                <p className="text-sm font-semibold">💰 Budget Picks!</p>
               </div>
             </div>
           </FadeIn>

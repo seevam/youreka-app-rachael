@@ -12,10 +12,10 @@ export const ProblemStatement: React.FC = () => {
         <FadeIn>
           <div className="text-center mb-16">
             <h2 className="text-h2-mobile md:text-h2 text-text-primary mb-4">
-              Beauty Shouldn't Be Confusing
+              Skincare Doesn't Have to Be Complicated
             </h2>
             <p className="text-body-mobile md:text-body text-text-secondary max-w-2xl mx-auto">
-              We understand the challenges you face with skincare
+              We get it - these are real problems teens face every day
             </p>
           </div>
         </FadeIn>

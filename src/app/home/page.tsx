@@ -1,34 +1,23 @@
 'use client'
 
-import { useAuth } from '@clerk/nextjs'
-import { redirect } from 'next/navigation'
 import { Container } from '@/components/ui/Container'
 import { Card } from '@/components/ui/Card'
+import { Button } from '@/components/ui/Button'
 
 export default function HomePage() {
-  const { isSignedIn, isLoaded } = useAuth()
-
-  if (!isLoaded) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
-      </div>
-    )
-  }
-
-  if (!isSignedIn) {
-    redirect('/')
-  }
-
   return (
     <main className="min-h-screen pt-24 pb-12 bg-background-gray">
       <Container>
-        <div className="mb-8">
+        <div className="mb-8 text-center">
           <h1 className="text-h1-mobile md:text-h1 text-text-primary mb-4">
-            Welcome to Your Dashboard
+            Your Skincare Dashboard
           </h1>
-          <p className="text-body-mobile md:text-body text-text-secondary">
-            Your personalized beauty journey starts here
+          <p className="text-body-mobile md:text-body text-text-secondary mb-6">
+            Track your skin journey and discover personalized product recommendations
+          </p>
+          <p className="text-sm text-text-secondary">
+            (Authentication coming soon - for now, explore our{' '}
+            <a href="/" className="text-primary hover:underline">landing page</a>)
           </p>
         </div>
 
