@@ -1,12 +1,11 @@
 'use client'
 
 import React from 'react'
-import { SignUpButton } from '@clerk/nextjs'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { FadeIn } from '@/components/animations/FadeIn'
 import { APP_TAGLINE, APP_DESCRIPTION } from '@/lib/constants'
-import { ArrowRight, TrendingUp, Award, Zap } from 'lucide-react'
+import { ArrowRight, Zap } from 'lucide-react'
 
 export const Hero: React.FC = () => {
   return (
@@ -36,12 +35,10 @@ export const Hero: React.FC = () => {
 
             <FadeIn delay={0.4}>
               <div className="flex flex-col sm:flex-row gap-4">
-                <SignUpButton mode="modal">
-                  <Button size="lg" className="group shadow-lg hover:shadow-xl transition-shadow">
-                    Find My Skin Type Free
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                  </Button>
-                </SignUpButton>
+                <Button size="lg" href="#quiz" className="group shadow-lg hover:shadow-xl transition-shadow">
+                  Find My Skin Type Free
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+                </Button>
                 <Button variant="secondary" size="lg" href="#features" className="border-2">
                   See How It Works
                 </Button>

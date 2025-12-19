@@ -1,6 +1,5 @@
 'use client'
 import React from 'react'
-import { SignUpButton } from '@clerk/nextjs'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { FadeIn } from '@/components/animations/FadeIn'
@@ -39,16 +38,15 @@ export const CTASection: React.FC = () => {
 
           <FadeIn delay={0.3}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <SignUpButton mode="modal">
-                <Button
-                  size="lg"
-                  variant="secondary"
-                  className="group bg-white text-primary hover:bg-gray-100 hover:text-primary-dark border-0 shadow-xl"
-                >
-                  Find My Skin Type Free
-                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                </Button>
-              </SignUpButton>
+              <Button
+                size="lg"
+                variant="secondary"
+                href="#quiz"
+                className="group bg-white text-primary hover:bg-gray-100 hover:text-primary-dark border-0 shadow-xl"
+              >
+                Find My Skin Type Free
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+              </Button>
             </div>
           </FadeIn>
 

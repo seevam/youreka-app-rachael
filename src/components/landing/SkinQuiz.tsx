@@ -133,7 +133,7 @@ export const SkinQuiz: React.FC = () => {
   const result = selectedSkinType ? SKIN_TYPE_RESULTS[selectedSkinType] : null
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary/5 via-white to-accent-blue/5">
+    <section id="quiz" className="py-20 bg-gradient-to-br from-primary/5 via-white to-accent-blue/5">
       <Container>
         <FadeIn>
           <div className="text-center mb-12">
@@ -241,14 +241,13 @@ export const SkinQuiz: React.FC = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="group">
-                    Get Full Analysis Free
-                    <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-                  </Button>
                   <Button variant="secondary" size="lg" onClick={resetQuiz}>
                     Retake Quiz
                   </Button>
                 </div>
+                <p className="text-center text-sm text-text-secondary mt-4">
+                  Sign up to get your full personalized skincare routine and product recommendations
+                </p>
               </Card>
             </FadeIn>
           ) : null}
