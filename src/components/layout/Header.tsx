@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { SignInButton, SignUpButton, UserButton, useAuth } from '@clerk/nextjs'
 import { Menu, X } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
@@ -10,7 +9,6 @@ import { APP_NAME, NAV_LINKS } from '@/lib/constants'
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { isSignedIn } = useAuth()
 
   return (
     <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-divider z-50">
@@ -37,25 +35,9 @@ export const Header: React.FC = () => {
             ))}
           </nav>
 
-          {/* Desktop Auth Buttons */}
+          {/* Desktop CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            {isSignedIn ? (
-              <>
-                <Button href="/home" variant="ghost">
-                  Dashboard
-                </Button>
-                <UserButton afterSignOutUrl="/" />
-              </>
-            ) : (
-              <>
-                <SignInButton mode="modal">
-                  <Button variant="ghost">Log In</Button>
-                </SignInButton>
-                <SignUpButton mode="modal">
-                  <Button variant="primary">Get Started</Button>
-                </SignUpButton>
-              </>
-            )}
+            <Button href="#quiz" variant="primary">Take Free Quiz</Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,27 +65,9 @@ export const Header: React.FC = () => {
                 </a>
               ))}
               <div className="pt-4 flex flex-col space-y-3">
-                {isSignedIn ? (
-                  <>
-                    <Button href="/home" variant="ghost">
-                      Dashboard
-                    </Button>
-                    <UserButton afterSignOutUrl="/" />
-                  </>
-                ) : (
-                  <>
-                    <SignInButton mode="modal">
-                      <Button variant="ghost" className="w-full">
-                        Log In
-                      </Button>
-                    </SignInButton>
-                    <SignUpButton mode="modal">
-                      <Button variant="primary" className="w-full">
-                        Get Started
-                      </Button>
-                    </SignUpButton>
-                  </>
-                )}
+                <Button href="#quiz" variant="primary" className="w-full">
+                  Take Free Quiz
+                </Button>
               </div>
             </nav>
           </div>
