@@ -1,86 +1,78 @@
 'use client'
 
+import { useState } from 'react'
 import { Container } from '@/components/ui/Container'
-import { Card } from '@/components/ui/Card'
-import { Button } from '@/components/ui/Button'
+import { FadeIn } from '@/components/animations/FadeIn'
+import { SkinProfileCard } from '@/components/dashboard/SkinProfileCard'
+import { ProductRecommendations } from '@/components/dashboard/ProductRecommendations'
+import { RoutineTracker } from '@/components/dashboard/RoutineTracker'
+import { ProgressStats } from '@/components/dashboard/ProgressStats'
+import { QuickActions } from '@/components/dashboard/QuickActions'
+import { MOCK_DASHBOARD_DATA } from '@/lib/mock-data/dashboard-data'
 
 export default function HomePage() {
+  const [dashboardData] = useState(MOCK_DASHBOARD_DATA)
+  const [completedSteps, setCompletedSteps] = useState<string[]>([])
+
+  const handleStepToggle = (stepId: string) => {
+    setCompletedSteps(prev =>
+      prev.includes(stepId)
+        ? prev.filter(id => id !== stepId)
+        : [...prev, stepId]
+    )
+  }
+
   return (
     <main className="min-h-screen pt-24 pb-12 bg-background-gray">
       <Container>
-        <div className="mb-8 text-center">
-          <h1 className="text-h1-mobile md:text-h1 text-text-primary mb-4">
-            Your Skincare Dashboard
-          </h1>
-          <p className="text-body-mobile md:text-body text-text-secondary mb-6">
-            Track your skin journey and discover personalized product recommendations
-          </p>
-          <p className="text-sm text-text-secondary">
-            (Authentication coming soon - for now, explore our{' '}
-            <a href="/" className="text-primary hover:underline">landing page</a>)
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <Card hover>
-            <div className="text-4xl mb-4">📸</div>
-            <h3 className="text-xl font-semibold text-text-primary mb-2">
-              Take Your First Scan
-            </h3>
-            <p className="text-text-secondary">
-              Start your beauty journey with an AI-powered face scan
+        {/* Welcome Header */}
+        <FadeIn>
+          <div className="mb-8">
+            <h1 className="text-h2-mobile md:text-h2 text-text-primary mb-2">
+              Welcome back! ✨
+            </h1>
+            <p className="text-body-mobile md:text-body text-text-secondary">
+              Keep up your routine and watch your skin transform
             </p>
-          </Card>
+          </div>
+        </FadeIn>
 
-          <Card hover>
-            <div className="text-4xl mb-4">📊</div>
-            <h3 className="text-xl font-semibold text-text-primary mb-2">
-              View Your Profile
-            </h3>
-            <p className="text-text-secondary">
-              Check your personalized beauty recommendations
-            </p>
-          </Card>
+        {/* Main Dashboard Grid */}
+        <div className="space-y-8">
+          {/* Skin Profile - Full Width */}
+          <FadeIn delay={0.1}>
+            <SkinProfileCard profile={dashboardData.skinProfile} />
+          </FadeIn>
 
-          <Card hover>
-            <div className="text-4xl mb-4">📈</div>
-            <h3 className="text-xl font-semibold text-text-primary mb-2">
-              Track Progress
-            </h3>
-            <p className="text-text-secondary">
-              Monitor your skin health improvements over time
-            </p>
-          </Card>
+          {/* Stats Overview - Full Width */}
+          <FadeIn delay={0.2}>
+            <ProgressStats stats={dashboardData.stats} />
+          </FadeIn>
 
-          <Card hover>
-            <div className="text-4xl mb-4">🛍️</div>
-            <h3 className="text-xl font-semibold text-text-primary mb-2">
-              Product Matches
-            </h3>
-            <p className="text-text-secondary">
-              Discover products perfect for your skin type
-            </p>
-          </Card>
+          {/* Two Column Layout for Routine & Quick Actions */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Routine Tracker */}
+            <FadeIn delay={0.3}>
+              <RoutineTracker
+                routine={dashboardData.routine}
+                completedSteps={completedSteps}
+                onStepToggle={handleStepToggle}
+              />
+            </FadeIn>
 
-          <Card hover>
-            <div className="text-4xl mb-4">💡</div>
-            <h3 className="text-xl font-semibold text-text-primary mb-2">
-              Beauty Tips
-            </h3>
-            <p className="text-text-secondary">
-              Get personalized advice for glowing skin
-            </p>
-          </Card>
+            {/* Quick Actions */}
+            <FadeIn delay={0.4}>
+              <QuickActions />
+            </FadeIn>
+          </div>
 
-          <Card hover>
-            <div className="text-4xl mb-4">⚙️</div>
-            <h3 className="text-xl font-semibold text-text-primary mb-2">
-              Settings
-            </h3>
-            <p className="text-text-secondary">
-              Customize your experience and preferences
-            </p>
-          </Card>
+          {/* Product Recommendations - Full Width */}
+          <FadeIn delay={0.5}>
+            <ProductRecommendations
+              products={dashboardData.recommendedProducts}
+              skinType={dashboardData.skinProfile.skinType}
+            />
+          </FadeIn>
         </div>
       </Container>
     </main>
